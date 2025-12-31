@@ -76,6 +76,7 @@ operationally predictable
 
 JFS‑24 is the operational counterpart to SFS‑24, which defines structural semantics.
 
+
 2. Scope
 JFS‑24 applies to:
 
@@ -105,7 +106,10 @@ CROSS JOIN
 
 SELF JOIN
 
+
+
 3. Execution‑Phase Semantics
+
 3.1 ON‑Clause (Matching Phase)
 The ON clause defines matching, not elimination.
 
@@ -134,7 +138,9 @@ ON controls matching.
 
 This distinction is the foundation of filter safety.
 
+
 4. Filter‑Side Semantics
+
 4.1 Preserved Side
 Filtering the preserved side is safe.
 
@@ -214,6 +220,7 @@ NEUTRAL
 
 
 7. Filter‑Type Semantics
+
 7.1 Equality Filters ( = )
 Safe in ON
 
@@ -234,6 +241,7 @@ Must not be used in ON
 
 Allowed in WHERE only on preserved side
 
+
 8. Operational Doctrine
 JFS‑24 establishes the following doctrine:
 
@@ -249,6 +257,7 @@ Filter placement must be intentional and documented
 
 This doctrine elevates filter reasoning to the level of enterprise governance.
 
+
 9. Compliance Requirements
 To comply with JFS‑24:
 
@@ -262,14 +271,15 @@ Validate all filters against the 24‑cell matrix
 
 Document filter intent in design artifacts
 
+
 10. Relationship to SFS‑24
 SFS‑24 defines what the join must structurally preserve.
 JFS‑24 defines how filters must behave to preserve it.
 
 Together, they form the Enterprise Join Semantics Architecture Suite.
 
-📄 SFS‑24 Standard:
-docs/10-sfs24-structural-framework/sfs24-standard.md
+SFS‑24 Standard:
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%E2%80%9124%20%E2%80%94%20Structural%20Framework%20for%20Join%20Semantics.md
 
 11. Versioning
 JFS‑24 follows semantic versioning:
@@ -280,8 +290,6 @@ Minor — new filter classifications
 
 Patch — clarifications or examples
 
-See:
-docs/90-legal-and-metadata/versioning-and-changelog.md
 
 12. Copyright
 © 2025 Usman Zafar. All rights reserved.
@@ -289,28 +297,6 @@ This standard is proprietary intellectual property.
 
 Unified Architecture
 SFS‑24 and JFS‑24 combine to form the Enterprise Join Semantics Architecture, a complete model for relational correctness.
-
-📄 Unified specification:  
-docs/30-unified-architecture/unified-sfs24-jfs24-spec.md
-
-Code
-<!-- Unified Architecture Diagram Placeholder -->
-See: docs/30-unified-architecture/unified-sfs24-jfs24-spec.md
-Start Here — Recommended Reading Path
-Architecture Suite Overview  
-docs/00-overview/architecture-suite-overview.md
-
-Structural Layer (SFS‑24)  
-docs/10-sfs24-structural-framework/sfs24-standard.md
-
-Filter Safety Layer (JFS‑24)  
-docs/20-jfs24-filter-safety/jfs24-standard.md
-
-Unified Architecture  
-docs/30-unified-architecture/unified-sfs24-jfs24-spec.md
-
-Workbook Chapter & Exercises  
-docs/40-workbook-integration/data-architect-workbook-chapter.md
 
 Repository Structure
 Code
