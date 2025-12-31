@@ -170,23 +170,35 @@ FULL JOIN + ON filter → safe but must be intentional
 JFS‑24 identifies six collapse patterns that must be prohibited.
 
 5.1 LEFT JOIN Collapse
+
 Code
 LEFT JOIN … WHERE right_column = …
+
 5.2 RIGHT JOIN Collapse
+
 Code
 RIGHT JOIN … WHERE left_column = …
+
 5.3 FULL JOIN Collapse (Left Side)
+
 Code
 FULL JOIN … WHERE left_column = …
+
 5.4 FULL JOIN Collapse (Right Side)
+
 Code
 FULL JOIN … WHERE right_column = …
+
 5.5 CROSS JOIN with ON (Left Side)
+
 Code
 CROSS JOIN … ON left_column = …
+
 5.6 CROSS JOIN with ON (Right Side)
+
 Code
 CROSS JOIN … ON right_column = …
+
 These patterns violate join semantics and must be rejected in code review.
 
 6. The 24‑Cell Join‑Filter Safety Matrix
