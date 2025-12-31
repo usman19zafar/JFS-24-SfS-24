@@ -34,7 +34,7 @@ the 24‑cell structural matrix
 the semantic‑structural 48‑cell matrix
 
 Read the standard:  
-docs/10-sfs24-structural-framework/sfs24-standard.md
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%E2%80%9124%20%E2%80%94%20Structural%20Framework%20for%20Join%20Semantics.md
 
 JFS‑24 — Join‑Filter Safety Standard
 JFS‑24 governs filter placement and execution‑phase behavior. It answers:
