@@ -63,7 +63,8 @@ semantic‑structural 48‑cell matrix
 📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS-24.pdf  
 📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%E2%80%9124%20%E2%80%94%20Architecture%E2%80%91Layer%20Diagram.md
 
-📘 JFS‑24 — Join‑Filter Safety Standard
+
+JFS‑24 — Join‑Filter Safety Standard
 Defines the operational laws of filters:
 
 ON = matching
@@ -78,9 +79,11 @@ join‑filter safety matrix
 
 operational doctrine (“WHERE kills NULLs”)
 
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Join%20Filter%20Safety%20Standard.pdf
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/introduction%20of%20JFS-24.md
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/JFS%E2%80%9124%20%E2%80%94%20Architecture%E2%80%91Layer%20Diagram.md
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Join%20Filter%20Safety%20Standard.pdf
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/introduction%20of%20JFS-24.md
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/JFS%E2%80%9124%20%E2%80%94%20Architecture%E2%80%91Layer%20Diagram.md
 
 Unified Architecture
 The suite integrates SFS‑24 and JFS‑24 into a single architecture:
@@ -95,12 +98,18 @@ governance‑centric view
 
 48‑cell semantic‑structural matrix
 
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%20%2B%20JFS%20v1.0
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Unified%20Execution%20Phase%20Flow.md
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Collapse%20Theorem%20%26%20Preservation%20Model.md
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Governance%E2%80%91centric%20unified%20view.md
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Mind%20Map.md
-📄 https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%20%2B%20JFS%20v1.0
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%20%2B%20JFS%20v1.0
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Unified%20Execution%20Phase%20Flow.md
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Collapse%20Theorem%20%26%20Preservation%20Model.md
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Governance%E2%80%91centric%20unified%20view.md
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/Mind%20Map.md
+
+https://github.com/usman19zafar/JFS-24-SfS-24/blob/main/SFS%20%2B%20JFS%20v1.0
+
 
 Key Artifacts
 This repository includes:
