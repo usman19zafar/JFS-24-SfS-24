@@ -1,5 +1,4 @@
-# JFS-24-SfS-24
-Enterprise Join Semantics Architecture Suite.
+```mermaid
 
 join-semantics-architecture-suite/
 ├─ README.md
@@ -97,3 +96,4 @@ join-semantics-architecture-suite/
    ├─ roadmap.md
    ├─ repository-structure.md
    └─ contributions-and-governance.md
+```
