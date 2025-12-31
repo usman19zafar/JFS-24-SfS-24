@@ -1,0 +1,216 @@
+# Unified SFS‑24 + JFS‑24 Architecture Specification
+### Enterprise Join Semantics Architecture Suite  
+**Version 1.0 — 2025**  
+**Author: Usman Zafar**
+
+---
+
+## 1. Purpose
+
+This specification defines the **unified architecture** formed by combining:
+
+- **SFS‑24** — Structural Framework for Join Semantics  
+- **JFS‑24** — Join‑Filter Safety Standard  
+
+Individually, each standard governs a distinct dimension of relational correctness:
+
+- SFS‑24 governs **structural semantics**  
+- JFS‑24 governs **operational semantics**  
+
+Together, they form the **Enterprise Join Semantics Architecture Suite**, a complete, reproducible, and audit‑ready model for SQL correctness across analytical, operational, and ETL/ELT systems.
+
+---
+
+## 2. Architectural Philosophy
+
+The unified architecture is built on three principles:
+
+### **2.1 Joins Are Structural Contracts**
+A join defines what must be preserved.
+
+### **2.2 Filters Must Respect Preservation**
+Filters must not violate the join’s structural contract.
+
+### **2.3 Collapse Is a Semantic Failure Mode**
+Any operation that eliminates NULL‑extended rows on the preserved side is a structural violation.
+
+These principles unify SFS‑24 and JFS‑24 into a single architectural doctrine.
+
+---
+
+## 3. The Two‑Layer Architecture Model
+
+The unified model consists of two layers:
+
+|  JFS‑24 Operational Semantics |
+|  (Filters, ON/WHERE, Safety)  |
++-------------------------------+
+|  SFS‑24 Structural Semantics  |
+|  (Preservation, NULLs, Laws)  |
+
+
+### **3.1 SFS‑24 (Structural Layer)**
+Defines:
+
+- preservation contracts  
+- NULL‑propagation architecture  
+- collapse boundaries  
+- structural invariants  
+- the 24‑cell structural matrix  
+
+### **3.2 JFS‑24 (Operational Layer)**
+Defines:
+
+- ON = matching  
+- WHERE = elimination  
+- safe vs unsafe filter placement  
+- collapse patterns  
+- the 24‑cell join‑filter matrix  
+
+The operational layer must **never contradict** the structural layer.
+
+---
+
+## 4. The Unified Execution Model
+
+The unified model defines a **three‑phase execution sequence**:
+
+### **4.1 Phase 1 — Matching (ON Clause)**
+- Determines row matching  
+- Does not eliminate NULL‑extended rows  
+- Safe for most filters  
+
+### **4.2 Phase 2 — Preservation (Join Type)**
+- LEFT preserves LEFT  
+- RIGHT preserves RIGHT  
+- FULL preserves both  
+- INNER preserves matched only  
+- CROSS preserves Cartesian product  
+
+### **4.3 Phase 3 — Elimination (WHERE Clause)**
+- Executes after preservation  
+- Eliminates rows  
+- Eliminates NULL‑extended rows  
+- Can collapse outer joins  
+
+**Unified Law:**  
+> ON defines matching.  
+> JOIN defines preservation.  
+> WHERE defines elimination.
+
+---
+
+## 5. The Unified 48‑Cell Semantic‑Structural Matrix
+
+The unified matrix combines:
+
+- join type  
+- preserved side  
+- NULL‑producing side  
+- filter placement (ON vs WHERE)  
+- filter type (EQ, NE, GT, IS NULL, IS NOT NULL)  
+- safety classification  
+
+Matrix is the **authoritative reference** for relational correctness.
+
+## 6. Unified Collapse Model
+
+Collapse occurs when:
+
+- a filter eliminates NULL‑extended rows  
+- ON is misused to simulate INNER JOIN  
+- CROSS JOIN is given an ON condition  
+- WHERE contradicts preservation intent  
+
+### **6.1 Structural Collapse (SFS‑24)**
+Eliminating NULL‑extended rows violates preservation.
+
+### **6.2 Operational Collapse (JFS‑24)**
+Filtering the NULL‑producing side in WHERE collapses the join.
+
+### **6.3 Unified Collapse Doctrine**
+> Collapse is the destruction of the join contract.
+
+---
+
+## 7. Unified Safety Doctrine
+
+The unified doctrine states:
+
+- A join must preserve what it promises (SFS‑24).  
+- A filter must not violate that promise (JFS‑24).  
+- ON must not be used to simulate INNER JOIN behavior.  
+- WHERE must not eliminate NULL‑extended rows.  
+- CROSS JOIN must not contain ON conditions.  
+- All join‑filter interactions must be validated against the 48‑cell matrix.  
+
+This doctrine forms the **governance backbone** of the suite.
+
+---
+
+## 8. Design Patterns
+
+### **8.1 Safe Pattern**
+Filter on preserved side:
+
+```sql
+LEFT JOIN dim d ON f.key = d.key
+WHERE f.status = 'ACTIVE';
+
+
+LEFT JOIN dim d ON f.key = d.key
+WHERE d.category = 'A';   -- collapse
+
+
+8.2 Unsafe Pattern
+Filter on NULL‑producing side:
+
+sql
+LEFT JOIN dim d ON f.key = d.key
+WHERE d.category = 'A';   -- collapse
+
+8.3 Safe ON‑Clause Filtering
+sql
+LEFT JOIN dim d
+  ON f.key = d.key
+ AND d.is_current = 1;
+
+8.4 Intentional INNER JOIN
+sql
+INNER JOIN dim d ON f.key = d.key
+WHERE d.category = 'A';
+
+9. Governance Requirements
+To comply with the unified architecture:
+
+All joins must declare preservation intent
+
+All filters must declare operational intent
+
+All SQL must be validated against the 48‑cell matrix
+
+All collapse patterns must be prohibited
+
+All code reviews must apply SFS‑24 + JFS‑24 rules
+
+All training must include unified doctrine
+
+10. Relationship to Other Documents
+SFS‑24 Standard
+docs/10-sfs24-structural-framework/sfs24-standard.md
+
+JFS‑24 Standard
+docs/20-jfs24-filter-safety/jfs24-standard.md
+
+48‑Cell Matrix
+docs/30-unified-architecture/semantic-structural-48-cell-matrix.md
+
+Workbook Integration
+docs/40-workbook-integration/data-architect-workbook-chapter.md
+
+11. Versioning
+This specification follows the suite’s semantic versioning model.
+
+12. Copyright
+© 2025 Usman Zafar. All rights reserved.
+This specification is proprietary intellectual property.
