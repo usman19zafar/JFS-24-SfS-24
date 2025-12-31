@@ -1,5 +1,7 @@
 Enterprise Join Semantics Architecture Suite
-SFS‑24 + JFS‑24
+SFS 24 + JFS 24
+
+
 Unified Structural & Operational Standards for Relational Correctness
 Executive Summary
 The Enterprise Join Semantics Architecture Suite is a dual‑standard framework that defines the structural and operational laws governing relational joins.
