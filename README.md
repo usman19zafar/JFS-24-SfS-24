@@ -212,16 +212,6 @@ INVALID
 
 NEUTRAL
 
-Code
-JOIN TYPE | LEFT WHERE | LEFT ON | RIGHT WHERE | RIGHT ON
----------------------------------------------------------
-INNER     | SAFE       | SAFE    | SAFE        | SAFE
-LEFT      | SAFE       | SAFE    | COLLAPSE    | SAFE
-RIGHT     | COLLAPSE   | SAFE    | SAFE        | SAFE
-FULL      | COLLAPSE   | SAFE    | COLLAPSE    | SAFE
-CROSS     | SAFE       | INVALID | SAFE        | INVALID
-SELF      | SAFE       | SAFE    | SAFE        | SAFE
-This matrix is the operational topology of join‑filter interactions.
 
 7. Filter‑Type Semantics
 7.1 Equality Filters ( = )
