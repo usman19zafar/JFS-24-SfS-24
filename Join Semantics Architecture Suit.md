@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     A[Enterprise Join Semantics Architecture Suite] --> B[SFS‑24 Structural Layer]
@@ -22,5 +23,6 @@ flowchart TD
     D[Unified Doctrine] --> D1["Joins are preservation contracts"]
     D --> D2["Filters must not violate preservation"]
     D --> D3["Collapse is destruction of the join contract"]
+```
 
     A --> D
