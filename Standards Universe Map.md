@@ -1,31 +1,32 @@
 ```mermaid
-flowchart TD
+flowchart TB
 
-    %% Meta Layer
-    FA[Foundational Assumptions]
+    subgraph Meta_Layer [Meta Layer]
+        FA[Foundational Assumptions]
+    end
 
-    %% Architecture Layer
-    DAIS[DAIS-10 System Architecture]
+    subgraph Architecture_Layer [Architecture Layer]
+        DAIS[DAIS-10 System Architecture]
+    end
 
-    %% Assurance Layer
-    QFIM[QFIM-10 Quality and Inspection Model]
+    subgraph Assurance_Layer [Assurance Layer]
+        QFIM[QFIM-10 Quality & Inspection Model]
+    end
 
-    %% Flow Layer
-    DIFS[DIFS-10 Data Flow Standard]
+    subgraph Flow_Layer [Flow Layer]
+        DIFS[DIFS-10 Data Flow Standard]
+    end
 
-    %% Safety Layer
-    SFS[SFS-24 Safety Filter Standard]
+    subgraph Safety_Layer [Safety Layer]
+        SFS[SFS-24 Safety Filter Standard]
+    end
 
-    %% Join Layer
-    JFS[JFS-24 Join Framework Standard]
+    subgraph Join_Layer [Join Layer]
+        JFS[JFS-24 Join Framework Standard]
+    end
 
     %% Relationships
     FA --> DAIS
-    FA --> QFIM
-    FA --> DIFS
-    FA --> SFS
-    FA --> JFS
-
     DAIS --> QFIM
     DAIS --> DIFS
     DAIS --> SFS
@@ -38,4 +39,5 @@ flowchart TD
     JFS --> SFS
 
     SFS --> QFIM
+
 ```
