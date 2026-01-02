@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     A[Unified Join Semantics Governance] --> B[Design Time]
@@ -29,3 +30,4 @@ flowchart TD
     F --> C
     E --> D
     F --> D
+```
