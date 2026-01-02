@@ -5,12 +5,12 @@ A[Unified Join Semantics Governance] --> B[Design Time]
 A --> C[Implementation Time]
 A --> D[Review & Audit Time]
 
-B --> B1[Declare join preservation intent\n(SFS-24)]
+B --> B1[Declare join preservation intent (SFS-24)]
 B --> B2[Choose join type and sides]
 B --> B3[Identify preserved vs NULL-producing sides]
 
-C --> C1[Place filters in ON vs WHERE\n(JFS-24)]
-C --> C2[Classify filters\n(NULL-sensitive vs NULL-neutral)]
+C --> C1[Place filters in ON vs WHERE (JFS-24)]
+C --> C2[Classify filters (NULL-sensitive vs NULL-neutral)]
 C --> C3[Map to 48-cell matrix]
 
 D --> D1[Detect collapse patterns]
@@ -30,5 +30,6 @@ E --> B
 F --> C
 E --> D
 F --> D
+
 
 ```
