@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
 
     A[Source Tables<br/>LEFT side / RIGHT side] --> B[Phase 1: Matching<br/>(ON clause)]
@@ -35,6 +36,7 @@ flowchart LR
         E3
         E4
     end
-
+```
     F[48‑Cell Semantic‑Structural Matrix] --> C
     F --> D
+```
