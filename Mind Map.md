@@ -1,3 +1,4 @@
+```mermaid
 mindmap
   root((join-semantics-architecture-suite))
     README.md
@@ -99,5 +100,6 @@ mindmap
 
     meta
       roadmap.md
+```
       repository-structure.md
       contributions-and-governance.md
