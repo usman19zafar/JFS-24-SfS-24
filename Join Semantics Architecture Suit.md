@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     A[Enterprise Join Semantics Architecture Suite] --> B[SFS‑24 Structural Layer]
