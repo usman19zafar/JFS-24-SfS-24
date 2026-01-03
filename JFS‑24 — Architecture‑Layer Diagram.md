@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     A[**JFS‑24 Join‑Filter Safety Standard**] --> B[Layer 1: Execution‑Phase Semantics]
@@ -29,3 +30,4 @@ flowchart TD
     F --> F1["Filters must preserve join contracts"]
     F --> F2["Unsafe filters cause semantic collapse"]
     F --> F3["Join semantics and filter semantics must align"]
+```
