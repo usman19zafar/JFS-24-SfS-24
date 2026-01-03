@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
 
     A[**SFS‑24 Structural Framework**] --> B[Layer 1: Preservation Contracts]
@@ -33,3 +34,4 @@ flowchart TD
     G --> G1["A join is a contract"]
     G --> G2["NULLs are structural signals"]
     G --> G3["Collapse is a semantic failure mode"]
+```
