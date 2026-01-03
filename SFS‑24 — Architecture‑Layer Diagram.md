@@ -1,4 +1,5 @@
 ```mermaid
+
 flowchart TD
 
     A[**SFS‑24 Structural Framework**] --> B[Layer 1: Preservation Contracts]
