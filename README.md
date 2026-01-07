@@ -152,23 +152,26 @@ Curriculum Developers
 Academic and Professional Standards Bodies
 
 Repository Structure
-Code
-/
-├── README.md
-├── License.md
-├── SFS‑24 — Structural Framework for Join Semantics.md
-├── JFS‑24 — Architecture‑Layer Diagram.md
-├── Collapse Theorem & Preservation Model.md
-├── Governance‑centric unified view.md
-├── Unified Execution Phase Flow.md
-├── SFS + JFS Architecture.md
-├── Join Semantics Architecture Suit.md
-├── Mind Map.md
-├── PDFs/
-│   ├── SFS-24.pdf
-│   ├── Join Filter Safety Standard.pdf
-│   └── SFS + JFS v1.0
-└── diagrams/
+
+```mermaid
+mindmap
+  root((Code))
+    README.md
+    License.md
+    SFS‑24 — Structural Framework for Join Semantics.md
+    JFS‑24 — Architecture‑Layer Diagram.md
+    Collapse Theorem & Preservation Model.md
+    Governance‑centric unified view.md
+    Unified Execution Phase Flow.md
+    SFS + JFS Architecture.md
+    Join Semantics Architecture Suit.md
+    Mind Map.md
+    PDFs
+      SFS-24.pdf
+      Join Filter Safety Standard.pdf
+      SFS + JFS v1.0
+    diagrams
+```
 Licensing
 This standards suite is proprietary intellectual property.
 See: License.md
